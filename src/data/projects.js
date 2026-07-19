@@ -5,7 +5,7 @@ export const projects = [
     name: "POS Hardware Management System",
     summary:
       "A point-of-sale platform for hardware retailers covering inventory, sales, expenses, and profit reporting in one dashboard.",
-    stack: ["React", "Firebase", "Firestore", "Chart.js", "Cloud Functions"],
+    stack: ["ReactJS", "Firebase", "Firebase Cloud Functions"],
     metrics: [
       { label: "Modules", value: "5" },
       { label: "Data sync", value: "Real-time" },
@@ -25,7 +25,7 @@ export const projects = [
         "Designed a single system around three daily habits: selling, restocking, and recording expenses. Every action updates the same live dataset, so the dashboard is always a true reflection of the business — not a report someone has to assemble later.",
       challenges:
         "Keeping the point-of-sale screen fast on low-end shop devices while Firestore synced in the background, and modeling profit correctly once returns, discounts, and partial payments were factored in.",
-      technologies: ["React", "Vite", "Firebase Auth", "Firestore", "Cloud Functions", "Chart.js", "Tailwind CSS"],
+      technologies: ["ReactJS", "Firebase", "Firebase Cloud Functions", "Tailwind CSS"],
       results:
         "Shop owners get same-day visibility into profit and stock levels instead of waiting until month-end reconciliation, and staff record a sale in under 10 seconds.",
     },
@@ -36,7 +36,7 @@ export const projects = [
     name: "Draft Tanzania",
     summary:
       "A league management and live sports platform with standings, fixtures, live scores, and event systems built for a responsive, fast-moving audience.",
-    stack: ["React", "Firebase", "Firestore", "React Router", "Redux"],
+    stack: ["ReactJS", "Firebase", "Firebase Cloud Functions"],
     metrics: [
       { label: "Data model", value: "League-based" },
       { label: "Updates", value: "Live" },
@@ -56,7 +56,7 @@ export const projects = [
         "Modeled the platform around leagues, seasons, and fixtures as first-class data, so standings and event pages could be derived automatically instead of maintained manually. Built the UI mobile-first, since most fans check scores from a phone during a match.",
       challenges:
         "Keeping standings accurate in real time as scores changed mid-match, and designing a component structure that could scale from one league to many without a rewrite.",
-      technologies: ["React", "Redux", "React Router", "Firebase", "Firestore", "Tailwind CSS"],
+      technologies: ["ReactJS", "Firebase", "Firebase Cloud Functions", "Tailwind CSS"],
       results:
         "Organizers publish a result once and standings, fixtures, and history update everywhere automatically, cutting manual table-keeping to zero.",
     },
@@ -67,7 +67,7 @@ export const projects = [
     name: "ImpactHub",
     summary:
       "A volunteer and organization management platform with messaging, notifications, and event coordination built to scale across many organizations.",
-    stack: ["React", "Firebase", "Firestore", "Cloud Functions", "Firebase Storage"],
+    stack: ["ReactJS", "Firebase", "Cloud Functions"],
     metrics: [
       { label: "User types", value: "Volunteers & orgs" },
       { label: "Messaging", value: "Real-time" },
@@ -87,7 +87,7 @@ export const projects = [
         "Structured the platform so organizations, volunteers, and events are independent, related entities — allowing one volunteer to belong to multiple organizations and one organization to run multiple concurrent events without data collisions.",
       challenges:
         "Designing a permissions model where organizations only see their own members and events, and keeping messaging and notifications reliable as usage grew across organizations.",
-      technologies: ["React", "Firebase Auth", "Firestore", "Cloud Functions", "Firebase Storage", "Tailwind CSS"],
+      technologies: ["ReactJS", "Firestore", "Firebase Cloud Functions", "Tailwind CSS"],
       results:
         "Organizations manage recruitment, communication, and events from one dashboard instead of juggling group chats, spreadsheets, and email threads.",
     },
@@ -98,7 +98,7 @@ export const projects = [
     name: "Appointment System",
     summary:
       "A scheduling platform for clinics that manages patient flow, appointment booking, and filtering through a clear, professional dashboard.",
-    stack: ["React", "Firebase", "Firestore", "React Router"],
+    stack: ["React", "MySQL", "NodeJS"],
     metrics: [
       { label: "Flow", value: "Patient-first" },
       { label: "Scheduling", value: "Conflict-free" },
@@ -118,7 +118,7 @@ export const projects = [
         "Built a booking flow with built-in conflict detection, paired with a dashboard that gives front-desk staff a single filterable view of the day, week, and provider schedules.",
       challenges:
         "Handling scheduling conflicts gracefully in the UI without blocking staff, and designing forms clinical staff could fill in quickly during a busy day.",
-      technologies: ["React", "React Router", "Firebase Auth", "Firestore", "Tailwind CSS"],
+      technologies: ["ReactJS", "NodeJS", "MySQL", "Tailwind CSS"],
       results:
         "Double-bookings dropped to zero and front-desk staff can see and adjust the day's full patient flow from a single screen.",
     },

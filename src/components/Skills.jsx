@@ -1,30 +1,57 @@
 import { motion } from "framer-motion";
-import { MonitorSmartphone, Cloud, Wrench, Bot } from "lucide-react";
+import { MonitorSmartphone, Database, ServerCog, Cloud, Wrench, Bot } from "lucide-react";
 
 const groups = [
   {
     icon: MonitorSmartphone,
     title: "Frontend",
-    note: "what people touch",
-    skills: ["React", "React Native", "Vite", "Tailwind CSS", "React Router", "Redux"],
+    note: "what users interact with",
+    skills: [
+      "ReactJS",
+      "React Native",
+      "Angular",
+      "Tailwind CSS",
+      "Responsive Design",
+    ],
   },
+
   {
-    icon: Cloud,
-    title: "Backend & Cloud",
-    note: "where the data lives",
-    skills: ["Firebase", "Firestore", "Firebase Storage", "Cloud Functions", "Nodejs", "Express", "Python"],
+    icon: ServerCog,
+    title: "Backend",
+    note: "business logic & APIs",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "Python",
+      "FastAPI",
+      "REST APIs",
+      "Authentication",
+    ],
   },
+
   {
-    icon: Wrench,
-    title: "Other",
-    note: "how it stays solid",
-    skills: ["FAST API", "REST APIs", "Authentication", "Responsive Design"],
+    icon: Database,
+    title: "Database & Cloud",
+    note: "data, storage & infrastructure",
+    skills: [
+      "MySQL",
+      "Firebase",
+      "Firestore",
+      "Firebase Cloud Functions",
+      "Cloud Storage",
+    ],
   },
+
   {
     icon: Bot,
     title: "AI Automation",
-    note: "what runs on its own",
-    skills: ["n8n", "AI Agents", "Workflow Automation"],
+    note: "intelligent workflows",
+    skills: [
+      "n8n",
+      "AI Agents",
+      "Workflow Automation",
+      "AI Integrations",
+    ],
   },
 ];
 

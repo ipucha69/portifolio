@@ -33,20 +33,13 @@ export default function Footer() {
 
           <div className="flex gap-5">
             <a
-              href="mailto:ipucha69@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=ipucha69@gmail.com"
+              target="_blank"
+              rel="noreferrer"
               aria-label="Email"
               className="rounded-full border border-cloud/15 p-2.5 transition-colors hover:border-signal-bright hover:text-signal-bright"
             >
               <Mail size={18} />
-            </a>
-            <a
-              href="https://github.com/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-              className="rounded-full border border-cloud/15 p-2.5 transition-colors hover:border-signal-bright hover:text-signal-bright"
-            >
-              <GithubIcon />
             </a>
             <a
               href="https://www.linkedin.com/in/rashid-iddi-161347187"

@@ -66,7 +66,7 @@ export const projects = [
   },
   {
     slug: "impacthub",
-    liveUrl: "https://impact-hub-703cb.web.app/",
+    liveUrl: "https://softbill-43cd8.web.app/",
     tag: "Community Platform",
     name: "ImpactHub",
     summary:

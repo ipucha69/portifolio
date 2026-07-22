@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, ExternalLink, KeyRound, Copy, Check, CheckCircle2 } from "lucide-react";
 import { getProjectBySlug, projects } from "../data/projects";
 import CTA from "../components/CTA";
 
@@ -49,6 +50,28 @@ export default function ProjectDetail() {
           >
             {project.summary}
           </motion.p>
+
+          {project.liveUrl && (
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+              className="mt-7 flex flex-wrap items-start gap-4"
+            >
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-signal px-5 py-2.5 text-sm font-medium text-cloud transition-colors hover:bg-signal-bright"
+              >
+                <ExternalLink size={16} />
+                View Project on Browser
+                <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
+
+              {project.demoCredentials && <DemoCredentials creds={project.demoCredentials} />}
+            </motion.div>
+          )}
 
           <div className="mt-8 flex flex-wrap gap-3">
             {project.metrics.map((m) => (
@@ -120,6 +143,47 @@ export default function ProjectDetail() {
 
       <CTA />
     </>
+  );
+}
+
+function DemoCredentials({ creds }) {
+  const [copied, setCopied] = useState(null);
+
+  const fields = [
+    { label: "Email", value: creds.email },
+    { label: "Private ID", value: creds.privateId },
+    { label: "Password", value: creds.password },
+  ].filter((f) => f.value);
+
+  const handleCopy = (label, value) => {
+    navigator.clipboard.writeText(value);
+    setCopied(label);
+    setTimeout(() => setCopied(null), 1500);
+  };
+
+  return (
+    <div className="rounded-xl border border-cloud/12 bg-cloud/5 px-4 py-3">
+      <p className="flex items-center gap-1.5 font-mono text-[10px] uppercase font-mono-tag tracking-widest text-cloud/45">
+        <KeyRound size={12} />
+        Demo credentials
+      </p>
+      <div className="mt-2 space-y-1.5">
+        {fields.map((f) => (
+          <div key={f.label} className="flex items-center gap-2.5">
+            <span className="w-16 shrink-0 font-mono text-[11px] text-cloud/40">{f.label}</span>
+            <span className="font-mono text-[13px] text-cloud/85">{f.value}</span>
+            <button
+              type="button"
+              onClick={() => handleCopy(f.label, f.value)}
+              aria-label={`Copy ${f.label}`}
+              className="text-cloud/35 transition-colors hover:text-signal-bright"
+            >
+              {copied === f.label ? <Check size={13} /> : <Copy size={13} />}
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 

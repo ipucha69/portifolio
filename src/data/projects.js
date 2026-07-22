@@ -1,6 +1,8 @@
 export const projects = [
   {
     slug: "pos-hardware-system",
+    liveUrl: "https://hardware-inventory-d6a33.web.app/",
+    demoCredentials: { privateId: "00002", email: "test@gmail.com", password: "test123" },
     tag: "Business Systems",
     name: "POS Hardware Management System",
     summary:
@@ -32,6 +34,7 @@ export const projects = [
   },
   {
     slug: "draft-tanzania",
+    liveUrl: "https://drafttz.web.app",
     tag: "Sports Platform",
     name: "Draft Tanzania",
     summary:
@@ -63,6 +66,7 @@ export const projects = [
   },
   {
     slug: "impacthub",
+    liveUrl: "https://impact-hub-703cb.web.app/",
     tag: "Community Platform",
     name: "ImpactHub",
     summary:
